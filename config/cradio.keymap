@@ -6,6 +6,12 @@
 #define SYM_L 2
 #define BT_L 3
 
+nice_view_spi: &spi0 {
+  sck-pin = <34>;
+  mosi-pin = <39>;
+  cs-gpios = <&gpio1 1 GPIO_ACTIVE_HIGH>;
+};
+
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
 
@@ -93,6 +99,7 @@
     compatible = "zmk,keymap";
 
     default_layer {
+      label = "Default";
       bindings = <
         &kp Q        &kp W  &kp E  &kp R     &kp T                &kp Y            &kp U     &kp I      &kp O    &kp P
         &hm LCTRL A  &kp S  &kp D  &kp F     &hm RALT G           &kp H            &kp J     &kp K      &kp L    &hm RCTRL SEMI
@@ -102,6 +109,7 @@
     };
 
     num_layer {
+      label = "Num";
       bindings = <
         &kp N1  &kp N2  &kp N3  &kp N4   &kp N5       &kp N6    &kp N7     &kp N8     &kp N9     &kp N0
         &kp F1  &kp F2  &kp F3  &kp F4   &kp F5       &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp C_VOL_UP
@@ -111,6 +119,7 @@
     };
 
     sym_layer {
+      label = "Sym";
       bindings = <
         &kp EXCL   &kp AT     &kp LBRC  &kp RBRC   &kp PIPE      &kp LA(GRAVE)  &kp TILDE  &kp BSLH  &none     &none
         &kp HASH   &kp DLLR   &kp LPAR  &kp RPAR   &none         &kp PLUS       &kp MINUS  &kp FSLH  &kp STAR  &kp SQT
@@ -120,6 +129,7 @@
     };
 
     bt_layer {
+      label = "BT";
       bindings = <
         &none        &none  &none  &none  &none      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
         &none        &none  &none  &none  &none      &bt BT_PRV    &bt BT_NXT    &none         &none         &bt BT_CLR
