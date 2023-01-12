@@ -104,7 +104,7 @@ nice_view_spi: &spi0 {
         &kp Q        &kp W  &kp E  &kp R     &kp T                &kp Y            &kp U     &kp I      &kp O    &kp P
         &hm LCTRL A  &kp S  &kp D  &kp F     &hm RALT G           &kp H            &kp J     &kp K      &kp L    &hm RCTRL SEMI
         &hm LSHFT Z  &kp X  &kp C  &kp V     &kp B                &kp N            &kp M     &kp COMMA  &kp DOT  &hm RSHFT FSLH
-                                    &kp LGUI  &lt SYM_L SPACE      &lt NUM_L ENTER  &kp BKSP
+                                   &kp LGUI  &lt SYM_L SPACE      &lt NUM_L ENTER  &kp BKSP
       >;
     };
 
@@ -124,17 +124,17 @@ nice_view_spi: &spi0 {
         &kp EXCL   &kp AT     &kp LBRC  &kp RBRC   &kp PIPE      &kp LA(GRAVE)  &kp TILDE  &kp BSLH  &none     &none
         &kp HASH   &kp DLLR   &kp LPAR  &kp RPAR   &none         &kp PLUS       &kp MINUS  &kp FSLH  &kp STAR  &kp SQT
         &kp PRCNT  &kp CARET  &kp LBKT  &kp RBKT   &mo BT_L      &kp AMPS       &kp EQUAL  &none     &none     &none
-                                            &trans  &trans        &kp SEMI       &trans
+                                        &trans     &trans        &kp SEMI       &trans
       >;
     };
 
     bt_layer {
       label = "BT";
       bindings = <
-        &none        &none  &none  &none  &none      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-        &none        &none  &none  &none  &none      &bt BT_PRV    &bt BT_NXT    &none         &none         &bt BT_CLR
-        &bootloader  &none  &none  &none  &none      &none         &none         &none         &none         &bootloader
-                                   &none  &none      &none         &none
+        &none  &none  &none  &none  &none      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+        &none  &none  &none  &none  &none      &bt BT_PRV    &bt BT_NXT    &none         &none         &bt BT_CLR
+        &none  &none  &none  &none  &none      &none         &none         &none         &none         &none
+                             &none  &none      &none         &none
       >;
     };
   };
