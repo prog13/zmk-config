@@ -4,7 +4,8 @@
 
 #define NUM_L 1
 #define SYM_L 2
-#define BT_L 3
+#define GAME_L 3
+#define BT_L 4
 
 nice_view_spi: &spi0 {
   sck-pin = <34>;
@@ -123,8 +124,18 @@ nice_view_spi: &spi0 {
       bindings = <
         &kp EXCL   &kp AT     &kp LBRC  &kp RBRC   &kp PIPE      &kp LA(GRAVE)  &kp TILDE  &kp BSLH  &none     &none
         &kp HASH   &kp DLLR   &kp LPAR  &kp RPAR   &none         &kp PLUS       &kp MINUS  &kp FSLH  &kp STAR  &kp SQT
-        &kp PRCNT  &kp CARET  &kp LBKT  &kp RBKT   &mo BT_L      &kp AMPS       &kp EQUAL  &none     &none     &none
+        &kp PRCNT  &kp CARET  &kp LBKT  &kp RBKT   &mo BT_L      &kp AMPS       &kp EQUAL  &none     &none     &tog GAME_L
                                         &trans     &trans        &kp SEMI       &trans
+      >;
+    };
+
+    game_layer {
+      label = "Game";
+      bindings = <
+        &kp Q  &kp W  &kp E  &kp R      &kp T           &kp Y      &kp U     &kp I      &kp O    &kp P
+        &kp A  &kp S  &kp D  &kp F      &kp G           &kp H      &kp J     &kp K      &kp L    &kp SEMI
+        &kp Z  &kp X  &kp C  &kp V      &kp B           &kp N      &kp M     &kp COMMA  &kp DOT  &tog GAME_L
+                             &kp LCTRL  &kp SPACE       &kp ENTER  &kp BKSP
       >;
     };
 
