@@ -17,3 +17,5 @@ board:
 shield:
   - cradio_left nice_view_adapter nice_view
   - cradio_right nice_view_adapter nice_view
+include:
+  - board: ferris_rev02
