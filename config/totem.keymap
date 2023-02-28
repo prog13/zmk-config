@@ -1,0 +1,107 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+
+#define BASE 0
+#define NUM  1
+#define SYM  2
+#define ADJ  3
+
+&mt {
+  quick-tap-ms = <100>;
+  global-quick-tap;
+  flavor = "tap-preferred";
+  tapping-term-ms = <170>;
+};
+
+/ {
+  combos {
+    compatible = "zmk,combos";
+
+    esc {
+      timeout-ms = <50>;
+      key-positions = <1 2>;
+      bindings = <&kp ESC>;
+    };
+
+    backspace {
+      timeout-ms = <50>;
+      key-positions = <11 12>;
+      bindings = <&kp BACKSPACE>;
+    };
+
+    tab {
+      timeout-ms = <50>;
+      key-positions = <12 13>;
+      bindings = <&kp TAB>;
+    };
+
+    enter {
+      timeout-ms = <50>;
+      key-positions = <23 24>;
+      bindings = <&kp ENTER>;
+    };
+
+    single_quote {
+      timeout-ms = <50>;
+      key-positions = <26 27>;
+      bindings = <&kp SINGLE_QUOTE>;
+    };
+  };
+
+  macros {
+    gif: gif {
+      label = "giphy";
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings =
+        <&macro_tap &kp AT_SIGN>,
+        <&macro_tap &kp G &kp I &kp F>;
+    };
+  };
+
+  keymap {
+    compatible = "zmk,keymap";
+
+    base_layer {
+      label= "BASE";
+      bindings = <
+                  &kp Q        &kp W      &kp E     &kp R    &kp T            &kp Y         &kp U         &kp I        &kp O        &kp P
+                  &mt LCTRL A  &kp S      &kp D     &kp F    &mt RALT G       &kp H         &kp J         &kp K        &kp L        &mt RCTRL SEMI
+        &kp LBKT  &mt LSHFT Z  &kp X      &kp C     &kp V    &kp B            &kp N         &kp M         &kp COMMA    &kp DOT      &mt RSHFT FSLH &kp SQT
+                                          &kp DEL   &kp LGUI &lt SYM SPACE    &lt NUM ENTER &kp BKSP      &trans
+      >;
+    };
+
+    num_layer {
+      label= "NUM";
+      bindings = <
+                  &kp N1       &kp N2     &kp N3    &kp N4   &kp N5           &kp N6        &kp N7        &kp N8       &kp N9       &kp N0
+                  &kp F1       &kp F2     &kp F3    &kp F4   &kp F5           &kp LEFT      &kp DOWN      &kp UP       &kp RIGHT    &kp C_VOL_UP
+        &none     &kp F6       &kp F7     &kp F8    &kp F9   &kp F10          &kp HOME      &kp PG_DN     &kp PG_UP    &kp END      &kp C_VOL_DN   &trans
+                                          &trans    &kp F11  &kp F12          &trans        &trans        &trans
+      >;
+    };
+
+    sym_layer {
+      label= "SYM";
+      bindings = <
+                  &kp EXCL     &kp AT     &kp LBRC  &kp RBRC   &kp PIPE       &kp LA(GRAVE)  &kp TILDE    &kp BSLH     &none        &none
+                  &kp HASH     &kp DLLR   &kp LPAR  &kp RPAR   &none          &kp PLUS       &kp MINUS    &kp FSLH     &kp STAR     &kp SQT
+        &kp RBKT  &kp PRCNT    &kp CARET  &kp LBKT  &kp RBKT   &mo ADJ        &kp AMPS       &kp EQUAL    &none        &none        &none          &trans
+                                          &trans    &gif       &trans         &trans         &trans       &trans
+      >;
+    };
+
+    adjust_layer {
+      label= "ADJ";
+      bindings = <
+                  &reset       &none      &none     &none      &out OUT_TOG   &bt BT_SEL 0   &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
+                  &bootloader  &none      &none     &none      &none          &bt BT_PRV     &bt BT_NXT   &none        &none        &bt BT_CLR
+        &none     &none        &none      &none     &none      &none          &none          &none        &none        &none        &none          &none
+                                          &none     &none      &none          &none          &none        &none
+      >;
+    };
+  };
+};
