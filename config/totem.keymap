@@ -97,8 +97,8 @@
     adjust_layer {
       label= "ADJ";
       bindings = <
-                  &reset       &none      &none     &none      &out OUT_TOG   &bt BT_SEL 0   &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
-                  &bootloader  &none      &none     &none      &none          &bt BT_PRV     &bt BT_NXT   &none        &none        &bt BT_CLR
+                  &none        &none      &none     &none      &out OUT_TOG   &bt BT_SEL 0   &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
+                  &none        &none      &none     &none      &none          &bt BT_PRV     &bt BT_NXT   &none        &none        &bt BT_CLR
         &none     &none        &none      &none     &none      &none          &none          &none        &none        &none        &none          &none
                                           &none     &none      &none          &none          &none        &none
       >;
