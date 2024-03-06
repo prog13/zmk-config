@@ -101,8 +101,8 @@
       display-name = "Num";
       bindings = <
         &kp N1       &kp N2     &kp N3    &kp N4     &kp N5           &kp N6         &kp N7        &kp N8        &kp N9        &kp N0
-        &kp F1       &kp F2     &kp F3    &kp F4     &kp F5           &kp LEFT       &kp DOWN      &kp UP        &kp RIGHT     &kp C_VOL_UP
-        &kp F6       &kp F7     &kp F8    &kp F9     &kp F10          &kp HOME       &kp PG_DN     &kp PG_UP     &kp END       &kp C_VOL_DN
+        &kp F1       &kp F2     &kp F3    &kp F4     &kp F5           &kp LEFT       &kp DOWN      &kp UP        &kp RIGHT     &kp C_BRI_UP
+        &kp F6       &kp F7     &kp F8    &kp F9     &kp F10          &kp HOME       &kp PG_DN     &kp PG_UP     &kp END       &kp C_BRI_DN
                                           &kp F11    &kp F12          &trans         &trans
       >;
     };
