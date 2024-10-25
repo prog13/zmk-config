@@ -12,5 +12,8 @@ manifest:
     - name: nice-view-mod
       remote: prog13
       revision: main
+    - name: nice-view-battery
+      remote: prog13
+      revision: main
   self:
     path: config
