@@ -15,5 +15,8 @@ manifest:
     - name: nice-view-battery
       remote: prog13
       revision: main
+    - name: urchin-zmk-module
+      remote: prog13
+      revision: main
   self:
     path: config
