@@ -9,6 +9,10 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
+    - name: zmk-issi-driver
+      remote: prog13
+      revision: main
+      import: app/west.yml
     - name: nice-view-mod
       remote: prog13
       revision: main
