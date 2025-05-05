@@ -165,7 +165,7 @@
     };
 
     num_layer {
-      display-name = "Num";
+      display-name = "Num/Nav";
       bindings = <
         &kp N1       &kp N2     &kp N3    &kp N4     &kp N5           &kp N6         &kp N7        &kp N8        &kp N9        &kp N0
         &kp F1       &kp F2     &kp F3    &kp F4     &kp F5           &kp LEFT       &kp DOWN      &kp UP        &kp RIGHT     &kp C_BRI_UP
@@ -175,7 +175,7 @@
     };
 
     sym_layer {
-      display-name = "Sym";
+      display-name = "Symbols";
       bindings = <
         &kp EXCL     &kp AT     &kp LBRC  &kp RBRC   &kp PIPE         &kp LA(GRAVE)  &kp TILDE     &kp BSLH      &none         &none
         &kp HASH     &kp DLLR   &kp LPAR  &kp RPAR   &none            &kp PLUS       &kp MINUS     &kp FSLH      &kp STAR      &kp SQT
