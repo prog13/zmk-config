@@ -24,76 +24,6 @@
       flavor = "tap-preferred";
       bindings = <&kp>, <&kp>;
     };
-
-    nf1: number_f1 {
-      compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
-      bindings = <&kp N1>, <&kp F1>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-
-    nf2: number_f2 {
-      compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
-      bindings = <&kp N2>, <&kp F2>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-
-    nf3: number_f3 {
-      compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
-      bindings = <&kp N3>, <&kp F3>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-
-    nf4: number_f4 {
-      compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
-      bindings = <&kp N4>, <&kp F4>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-
-    nf5: number_f5 {
-      compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
-      bindings = <&kp N5>, <&kp F5>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-
-    nf6: number_f6 {
-      compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
-      bindings = <&kp N6>, <&kp F6>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-
-    nf7: number_f7 {
-      compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
-      bindings = <&kp N7>, <&kp F7>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-
-    nf8: number_f8 {
-      compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
-      bindings = <&kp N8>, <&kp F8>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-
-    nf9: number_f9 {
-      compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
-      bindings = <&kp N9>, <&kp F9>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-
-    nf0: number_f10 {
-      compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
-      bindings = <&kp N0>, <&kp F10>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
   };
 
   combos {
@@ -187,8 +117,8 @@
     game_layer {
       display-name = "Game";
       bindings = <
-        &kp ESC      &kp Q      &kp W     &kp E      &kp R            &nf1           &nf2          &nf3          &nf4          &nf5
-        &kp LSHFT    &kp A      &kp S     &kp D      &kp F            &nf6           &nf7          &nf8          &nf9          &nf0
+        &kp ESC      &kp Q      &kp W     &kp E      &kp R            &mt F1 N1      &mt F2 N2     &mt F3 N3     &mt F4 N4     &mt F5 N5
+        &kp LSHFT    &kp A      &kp S     &kp D      &kp F            &mt F6 N6      &mt F7 N7     &mt F8 N8     &mt F9 N9     &mt F10 N0
         &kp LCTRL    &kp Z      &kp X     &kp C      &kp V            &kp F11        &kp F12       &kp F13       &kp F14       &kp F15
                                           &kp LCTRL  &kp SPACE        &kp ENTER      &kp BSPC
       >;
