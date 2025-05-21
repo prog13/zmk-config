@@ -3,6 +3,14 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
+#include "helpers/34_key_labels.h"
+
+// https://github.com/urob/zmk-config/tree/main#timeless-homerow-mods
+#define KEYS_L LT0 LT1 LT2 LT3 LT4 LM0 LM1 LM2 LM3 LM4 LB0 LB1 LB2 LB3 LB4
+#define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4
+#define THUMBS LH1 LH0 RH0 RH1
+
+#define DEF 0
 #define NUM 1
 #define SYM 2
 #define GAME 3
@@ -30,55 +38,50 @@
   combos {
     compatible = "zmk,combos";
 
-    //  0  1  2  3  4     5  6  7  8  9
-    // 10 11 12 13 14    15 16 17 18 19
-    // 20 21 22 23 24    25 26 27 28 29
-    //          30 31    32 33
-
     combo_esc {
-      key-positions = <1 2>;
+      key-positions = <LT2 LT3>;
       bindings = <&kp ESC>;
     };
 
     combo_backspace {
-      key-positions = <11 12>;
+      key-positions = <LM3 LM2>;
       bindings = <&kp BACKSPACE>;
     };
 
     combo_tab {
-      key-positions = <12 13>;
+      key-positions = <LM2 LM1>;
       bindings = <&kp TAB>;
     };
 
     combo_less_than {
-      key-positions = <16 17>;
+      key-positions = <RM1 RM2>;
       bindings = <&kp LESS_THAN>;
     };
 
     combo_greater_than {
-      key-positions = <17 18>;
+      key-positions = <RM2 RM3>;
       bindings = <&kp GREATER_THAN>;
     };
 
     combo_enter {
-      key-positions = <22 23>;
+      key-positions = <LB2 LB1>;
       bindings = <&kp ENTER>;
     };
 
     combo_single_quote {
-      key-positions = <25 26>;
+      key-positions = <RB0 RB1>;
       bindings = <&kp SINGLE_QUOTE>;
     };
 
     combo_underscore {
-      key-positions = <26 27>;
+      key-positions = <RB1 RB2>;
       bindings = <&kp UNDERSCORE>;
     };
 
     combo_toggle_game {
-      key-positions = <9 29>;
+      key-positions = <RT4 RB4>;
       bindings = <&tog GAME>;
-      layers = <0 3>;
+      layers = <DEF GAME>;
     };
   };
 
