@@ -6,7 +6,8 @@
 #define NUM 1
 #define SYM 2
 #define GAME 3
-#define ADJ 4
+#define FN 4
+#define ADJ 5
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt {
@@ -77,7 +78,7 @@
     combo_toggle_game {
       key-positions = <9 29>;
       bindings = <&tog GAME>;
-      layers = <3>;
+      layers = <0 3>;
     };
   };
 
@@ -109,7 +110,7 @@
       bindings = <
         &kp EXCL     &kp AT     &kp LBRC  &kp RBRC   &kp PIPE         &kp LA(GRAVE)  &kp TILDE     &kp BSLH      &none         &none
         &kp HASH     &kp DLLR   &kp LPAR  &kp RPAR   &none            &kp PLUS       &kp MINUS     &kp FSLH      &kp STAR      &kp SQT
-        &kp PRCNT    &kp CARET  &kp LBKT  &kp RBKT   &mo ADJ          &kp AMPS       &kp EQUAL     &none         &none         &tog GAME
+        &kp PRCNT    &kp CARET  &kp LBKT  &kp RBKT   &mo ADJ          &kp AMPS       &kp EQUAL     &none         &none         &none
                                           &trans     &trans           &kp COLON      &kp SEMI
       >;
     };
@@ -117,10 +118,20 @@
     game_layer {
       display-name = "Game";
       bindings = <
-        &kp ESC      &kp Q      &kp W     &kp E      &kp R            &mt F1 N1      &mt F2 N2     &mt F3 N3     &mt F4 N4     &mt F5 N5
-        &kp LSHFT    &kp A      &kp S     &kp D      &kp F            &mt F6 N6      &mt F7 N7     &mt F8 N8     &mt F9 N9     &mt F10 N0
-        &kp LCTRL    &kp Z      &kp X     &kp C      &kp V            &kp F11        &kp F12       &kp F13       &kp F14       &kp F15
-                                          &kp LCTRL  &kp SPACE        &kp ENTER      &kp BSPC
+        &kp ESC      &kp Q      &kp W     &kp E      &kp R            &kp N1         &kp N2        &kp N3        &kp N4        &kp N5
+        &kp LSHFT    &kp A      &kp S     &kp D      &kp F            &kp N6         &kp N7        &kp N8        &kp N9        &kp N0
+        &kp LCTRL    &kp Z      &kp X     &kp C      &kp V            &none          &none         &none         &none         &none
+                                          &mo FN     &kp SPACE        &kp ENTER      &kp BSPC
+      >;
+    };
+
+    game_aux_layer {
+      display-name = "Game Fn";
+      bindings = <
+        &trans       &trans     &trans    &trans     &trans            &kp F1         &kp F2        &kp F3        &kp F4        &kp F5
+        &trans       &trans     &trans    &trans     &trans            &kp F6         &kp F7        &kp F8        &kp F9        &kp F10
+        &trans       &trans     &trans    &trans     &trans            &kp F11        &kp F12       &kp F13       &kp F14       &kp F15
+                                          &trans     &trans            &kp F16        &kp F17
       >;
     };
 
