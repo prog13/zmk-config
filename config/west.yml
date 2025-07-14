@@ -20,6 +20,9 @@ manifest:
     - name: urchin-zmk-module
       remote: prog13
       revision: main
+    - name: totem-zmk-module
+      remote: prog13
+      revision: main
     - name: zmk-dongle-screen
       remote: prog13
       revision: main
