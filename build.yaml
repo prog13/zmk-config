@@ -32,6 +32,7 @@ include:
   - board: seeeduino_xiao_ble
     shield: totem_dongle dongle_screen
     artifact-name: totem_dongle
+    cmake-args: -DCONFIG_DONGLE_SCREEN_MAX_BRIGHTNESS=50 -DCONFIG_DONGLE_SCREEN_WPM_ACTIVE=n
 
   - board: seeeduino_xiao_ble
     shield: settings_reset
