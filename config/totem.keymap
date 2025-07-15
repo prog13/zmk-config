@@ -3,6 +3,8 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
+#include "helpers/38_key_labels.h"
+
 #define DEF 0
 #define NUM 1
 #define SYM 2
@@ -31,28 +33,43 @@
     compatible = "zmk,combos";
 
     combo_esc {
-      key-positions = <1 2>;
+      key-positions = <LT2 LT3>;
       bindings = <&kp ESC>;
     };
 
     combo_backspace {
-      key-positions = <11 12>;
+      key-positions = <LM3 LM2>;
       bindings = <&kp BACKSPACE>;
     };
 
     combo_tab {
-      key-positions = <12 13>;
+      key-positions = <LM2 LM1>;
       bindings = <&kp TAB>;
     };
 
+    combo_less_than {
+      key-positions = <RM1 RM2>;
+      bindings = <&kp LESS_THAN>;
+    };
+
+    combo_greater_than {
+      key-positions = <RM2 RM3>;
+      bindings = <&kp GREATER_THAN>;
+    };
+
     combo_enter {
-      key-positions = <23 24>;
+      key-positions = <LB2 LB1>;
       bindings = <&kp ENTER>;
     };
 
     combo_single_quote {
-      key-positions = <26 27>;
+      key-positions = <RB0 RB1>;
       bindings = <&kp SINGLE_QUOTE>;
+    };
+
+    combo_underscore {
+      key-positions = <RB1 RB2>;
+      bindings = <&kp UNDERSCORE>;
     };
   };
 
@@ -94,7 +111,7 @@
       bindings = <
                   &none        &none      &none     &none      &out OUT_TOG   &bt BT_SEL 0   &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
                   &none        &none      &none     &none      &none          &none          &none        &none        &none        &bt BT_CLR
-        &none     &none        &none      &none     &none      &none          &kp F23        &kp F24      &none        &none        &none          &none
+        &none     &none        &none      &none     &none      &none          &kp F23        &kp F24      &none        &none        &studio_unlock &none
                                           &none     &none      &none          &none          &none        &none
       >;
     };
