@@ -19,7 +19,7 @@ manifest:
       revision: main
     - name: urchin-zmk-module
       remote: prog13
-      revision: main
+      revision: dongle
     - name: totem-zmk-module
       remote: prog13
       revision: main
