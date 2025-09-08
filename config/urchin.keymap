@@ -79,6 +79,12 @@
       bindings = <&tog GAME>;
       layers = <DEF GAME>;
     };
+
+    combo_tab_game {
+      key-positions = <LT1 LT0>;
+      bindings = <&kp TAB>;
+      layers = <DEF GAME>;
+    };
   };
 
   keymap {
