@@ -25,7 +25,7 @@ include:
 
   - board: seeeduino_xiao_ble
     shield: urchin_dongle dongle_screen
-    cmake-args: -DCONFIG_DONGLE_SCREEN_MAX_BRIGHTNESS=50 -DCONFIG_DONGLE_SCREEN_BRIGHTNESS_STEP=5 -DCONFIG_DONGLE_SCREEN_WPM_ACTIVE=n
+    cmake-args: -DCONFIG_DONGLE_SCREEN_DEFAULT_BRIGHTNESS=50 -DCONFIG_DONGLE_SCREEN_BRIGHTNESS_STEP=2 -DCONFIG_DONGLE_SCREEN_WPM_ACTIVE=n
     artifact-name: urchin_dongle
 
   - board: nice_nano_v2

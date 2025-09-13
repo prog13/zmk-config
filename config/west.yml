@@ -24,7 +24,7 @@ manifest:
       remote: prog13
       revision: main
     - name: zmk-dongle-screen
-      remote: prog13
+      remote: janpfischer
       revision: main
   self:
     path: config
