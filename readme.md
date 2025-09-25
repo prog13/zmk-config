@@ -1,4 +1,4 @@
-# Tiny keeb configs and keymaps
+# Tiny keebs (configs and keymaps)
 
 This repo contains configuration files for:
 
