@@ -141,7 +141,7 @@
     sym_layer {
       display-name = "Symbols";
       bindings = <
-        &kp EXCL     &kp AT     &kp LBRC  &kp RBRC   &kp PIPE         &kp LA(GRAVE)  &kp TILDE     &kp BSLH      &none         &none
+        &kp EXCL     &kp AT     &kp LBRC  &kp RBRC   &kp PIPE         &kp GRAVE      &kp TILDE     &kp BSLH      &none         &none
         &kp HASH     &kp DLLR   &kp LPAR  &kp RPAR   &none            &kp PLUS       &hyphmdash    &kp FSLH      &kp STAR      &kp SQT
         &kp PRCNT    &kp CARET  &kp LBKT  &kp RBKT   &mo ADJ          &kp AMPS       &kp EQUAL     &none         &none         &none
                                           &trans     &trans           &kp COLON      &kp SEMI
