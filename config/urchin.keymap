@@ -57,6 +57,20 @@
       bindings = <&kp MINUS>, <&kp LS(RA(MINUS))>; // - , —
       mods = <(MOD_LALT|MOD_RALT)>;
     };
+
+    cbrivolup: c_bri_vol_up {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp C_BRI_UP>, <&kp C_VOL_UP>; // C_BRI_UP , C_VOL_UP
+      mods = <(MOD_LSFT)>;
+    };
+
+    cbrivoldn: c_bri_vol_dn {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp C_BRI_DN>, <&kp C_VOL_DN>; // C_BRI_DN , C_VOL_DN
+      mods = <(MOD_LSFT)>;
+    };
   };
 
   combos {
@@ -132,8 +146,8 @@
       display-name = "Num/Nav";
       bindings = <
         &kp N1       &kp N2     &kp N3    &kp N4     &kp N5           &kp N6         &kp N7        &kp N8        &kp N9        &kp N0
-        &kp F1       &kp F2     &kp F3    &kp F4     &kp F5           &kp LEFT       &kp DOWN      &kp UP        &kp RIGHT     &kp C_BRI_UP
-        &kp F6       &kp F7     &kp F8    &kp F9     &kp F10          &kp HOME       &kp PG_DN     &kp PG_UP     &kp END       &kp C_BRI_DN
+        &kp F1       &kp F2     &kp F3    &kp F4     &kp F5           &kp LEFT       &kp DOWN      &kp UP        &kp RIGHT     &cbrivolup
+        &kp F6       &kp F7     &kp F8    &kp F9     &kp F10          &kp HOME       &none         &none         &kp END       &cbrivoldn
                                           &kp F11    &kp F12          &trans         &trans
       >;
     };
