@@ -6,11 +6,12 @@
 #include "helpers/34_key_labels.h"
 
 #define DEF 0
-#define NUM 1
-#define SYM 2
-#define GAME 3
-#define FN 4
-#define ADJ 5
+#define LINUX 1
+#define NUM 2
+#define SYM 3
+#define GAME 4
+#define FN 5
+#define ADJ 6
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 // https://zmk.dev/docs/keymaps/behaviors/hold-tap#quick-tap-ms
@@ -116,6 +117,12 @@
       bindings = <&kp UNDERSCORE>;
     };
 
+    combo_toggle_linux {
+      key-positions = <RT4 RM4>;
+      bindings = <&tog LINUX>;
+      layers = <DEF LINUX>;
+    };
+
     combo_toggle_game {
       key-positions = <RT4 RB4>;
       bindings = <&tog GAME>;
@@ -139,6 +146,16 @@
         &hm LSHFT A  &kp S      &kp D     &kp F      &hm RALT G       &kp H          &kp J       &kp K         &kp L         &hm RSHFT SEMI
         &hm LCTRL Z  &kp X      &kp C     &kp V      &kp B            &kp N          &kp M       &kp COMMA     &dothellip    &hm RCTRL FSLH
                                           &kp LGUI   &lt SYM SPACE    &lt NUM ENTER  &kp BSPC
+      >;
+    };
+
+    linux_layer {
+      display-name = "Linux";
+      bindings = <
+        &trans       &trans     &trans    &trans     &trans           &trans         &trans      &trans        &trans        &trans
+        &trans       &trans     &trans    &trans     &trans           &trans         &trans      &trans        &trans        &trans
+        &hm LGUI Z   &trans     &trans    &trans     &trans           &trans         &trans      &trans        &trans        &trans
+                                          &kp LCTRL  &trans           &trans         &trans
       >;
     };
 
