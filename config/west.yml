@@ -6,10 +6,12 @@ manifest:
       url-base: https://github.com/prog13
     - name: janpfischer
       url-base: https://github.com/janpfischer
+    - name: m165437
+      url-base: https://github.com/M165437
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: v0.3
+      revision: main
       import: app/west.yml
     - name: nice-view-mod
       remote: prog13
@@ -25,6 +27,9 @@ manifest:
       revision: main
     - name: zmk-dongle-screen
       remote: janpfischer
+      revision: upgrade-4.1
+    - name: nice-view-gem
+      remote: m165437
       revision: main
   self:
     path: config
