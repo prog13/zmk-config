@@ -118,7 +118,7 @@
     };
 
     combo_toggle_linux {
-      key-positions = <RT4 RM4>;
+      key-positions = <RT3 RM4>;
       bindings = <&tog LINUX>;
       layers = <DEF LINUX>;
     };
