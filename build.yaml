@@ -12,8 +12,8 @@ include:
     artifact-name: urchin_right
 
   - board: xiao_ble//zmk
-    shield: urchin_dongle dongle_screen
-    cmake-args: -DCONFIG_ZMK_SLEEP=n -DCONFIG_DONGLE_SCREEN_DEFAULT_BRIGHTNESS=50 -DCONFIG_DONGLE_SCREEN_BRIGHTNESS_STEP=2 -DCONFIG_DONGLE_SCREEN_WPM_ACTIVE=n
+    shield: urchin_dongle prospector_adapter
+    cmake-args: -DCONFIG_ZMK_SLEEP=n -DCONFIG_PROSPECTOR_STATUS_SCREEN_FIELD=y -DCONFIG_PROSPECTOR_FIXED_BRIGHTNESS=50 -DCONFIG_PROSPECTOR_USE_AMBIENT_LIGHT_SENSOR=n
     artifact-name: urchin_dongle
 
   - board: nice_nano//zmk
