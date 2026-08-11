@@ -1,0 +1,13 @@
+/*
+ * Panel geometry for the Waveshare 1.83" Touch LCD Module Rev2 (ST7789P,
+ * 240x284) fitted in place of the original 240x280 Prospector display.
+ */
+
+&st7789 {
+    height = <284>;
+    y-offset = <0>;
+};
+
+&cst816s {
+    status = "okay";
+};

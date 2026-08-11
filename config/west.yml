@@ -34,7 +34,7 @@ manifest:
       remote: m165437
       revision: main
     - name: prospector-zmk-module
-      remote: carrefinho
+      remote: prog13
       revision: feat/new-status-screens
   self:
     path: config
