@@ -18,23 +18,30 @@ manifest:
     - name: nice-view-mod
       remote: prog13
       revision: main
+      path: modules/nice-view-mod
     - name: nice-view-battery
       remote: prog13
       revision: main
+      path: modules/nice-view-battery
     - name: urchin-zmk-module
       remote: prog13
       revision: dongle
+      path: modules/urchin-zmk-module
     - name: totem-zmk-module
       remote: prog13
       revision: main
+      path: modules/totem-zmk-module
     - name: zmk-dongle-screen
       remote: janpfischer
       revision: upgrade-4.1
+      path: modules/zmk-dongle-screen
     - name: nice-view-gem
       remote: m165437
       revision: main
+      path: modules/nice-view-gem
     - name: prospector-zmk-module
       remote: prog13
       revision: feat/new-status-screens
+      path: modules/prospector-zmk-module
   self:
     path: config
