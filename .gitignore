@@ -1,2 +1,10 @@
+/.west/
+/modules/
+/zephyr/
+/zmk/
+/artifacts/
+/build/
+/compile_commands.json
+/.claude/settings.local.json
+/.vscode/
 .DS_Store
-.vscode

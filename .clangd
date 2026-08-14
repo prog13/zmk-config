@@ -1,0 +1,4 @@
+CompileFlags:
+  CompilationDatabase: .
+  # gcc-only, clang errors on them
+  Remove: [-mfp16-format=*, -fno-reorder-functions]

@@ -1,0 +1,49 @@
+{
+  "name": "zmk dev",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+
+  "workspaceMount": "source=${localEnv:HOME}/Projects/zmk,target=/workspaces/zmk,type=bind,consistency=delegated",
+  "workspaceFolder": "/workspaces/zmk/zmk-config",
+
+  "remoteUser": "dev",
+  "updateRemoteUserUID": true,
+
+  "containerEnv": {
+    "ZMK_LOCAL_MODULES": ""
+  },
+
+  "mounts": [
+    "source=zmk-claude-state,target=/home/dev/.claude,type=volume",
+    "source=zmk-build,target=/build,type=volume",
+    "source=zmk-west-zmk,target=/workspaces/zmk/zmk-config/zmk,type=volume",
+    "source=zmk-west-zephyr,target=/workspaces/zmk/zmk-config/zephyr,type=volume",
+    "source=zmk-west-modules,target=/workspaces/zmk/zmk-config/modules,type=volume"
+  ],
+
+  "runArgs": [
+    "--add-host=host.docker.internal:host-gateway",
+    // Bind /dev (not --device) so the dongle survives flash re-enumeration;
+    // the cgroup rule admits only ttyACM, and gid 985 is the host's uucp group.
+    "--device-cgroup-rule=c 166:* rmw",
+    "--group-add=985",
+    "-v", "/dev:/dev",
+    "-v", "/run/udev:/run/udev:ro"
+  ],
+
+  "postCreateCommand": "bash .devcontainer/bootstrap.sh",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "llvm-vs-code-extensions.vscode-clangd"
+      ],
+      "settings": {
+        "clangd.arguments": [
+          "--query-driver=/opt/zephyr-sdk-0.16.9/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc"
+        ]
+      }
+    }
+  }
+}
