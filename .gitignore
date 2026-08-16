@@ -7,4 +7,8 @@
 /compile_commands.json
 /.claude/settings.local.json
 /.vscode/
+/.zed/
+/.cache/
+/optional/
+.scratch
 .DS_Store
