@@ -39,6 +39,10 @@ manifest:
       remote: m165437
       revision: main
       path: modules/nice-view-gem
+    - name: nice-view-field
+      remote: prog13
+      revision: main
+      path: modules/nice-view-field
     - name: prospector-zmk-module
       remote: prog13
       revision: feat/new-status-screens
