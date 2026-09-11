@@ -11,3 +11,7 @@
 &cst816s {
     status = "okay";
 };
+
+&tsl2591 {
+    status = "okay";
+};
